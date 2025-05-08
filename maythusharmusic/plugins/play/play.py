@@ -503,7 +503,7 @@ async def play_music(client, CallbackQuery, _):
 
 
 @app.on_callback_query(filters.regex("AnonymousAdmin") & ~BANNED_USERS)
-async def piyush_check(client, CallbackQuery):
+async def anonymous_check(client, CallbackQuery):
     try:
         await CallbackQuery.answer(
             "» ʀᴇᴠᴇʀᴛ ʙᴀᴄᴋ ᴛᴏ ᴜsᴇʀ ᴀᴄᴄᴏᴜɴᴛ :\n\nᴏᴘᴇɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ sᴇᴛᴛɪɴɢs.\n-> ᴀᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs\n-> ᴄʟɪᴄᴋ ᴏɴ ʏᴏᴜʀ ɴᴀᴍᴇ\n-> ᴜɴᴄʜᴇᴄᴋ ᴀɴᴏɴʏᴍᴏᴜs ᴀᴅᴍɪɴ ᴘᴇʀᴍɪssɪᴏɴs.",
@@ -661,4 +661,20 @@ async def slider_queries(client, CallbackQuery, _):
         )
         return await CallbackQuery.edit_message_media(
             media=med, reply_markup=InlineKeyboardMarkup(buttons)
-)
+        )
+
+# ------------------------------- Sticker Search Feature -------------------------------
+
+@app.on_callback_query(filters.regex("search_sticker") & ~BANNED_USERS)
+async def send_search_sticker(client, CallbackQuery):
+    try:
+        if config.STICKER_ID:
+            await CallbackQuery.message.reply_sticker(config.STICKER_ID)
+            await CallbackQuery.answer("🔍 Search Sticker Sent!")
+        else:
+            await CallbackQuery.answer("Sticker not configured", show_alert=True)
+    except Exception as e:
+        print(f"Error sending sticker: {e}")
+        await CallbackQuery.answer("Failed to send sticker", show_alert=True)
+
+# --------------------------------------------------------------------------------------
