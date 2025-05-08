@@ -3,7 +3,7 @@ services:
     name: maythusharmusicv2
     env: python
     plan: pro
-    region: oregon
+    region: virginia
     buildCommand: pip3 install --no-cache-dir --upgrade --requirement requirements.txt
     startCommand: bash start
     envVars:
