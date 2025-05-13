@@ -12,7 +12,7 @@ from youtubesearchpython.__future__ import VideosSearch
 from maythusharmusic.utils.database import is_on_off
 from maythusharmusic.utils.formatters import time_to_seconds
 
-API_KEY = "1EdAhtfqtegJL0A6I6RjCaxv"
+API_KEY = "Rf1qda5gyCITj6VbrekzRxmR"
 
 import os
 import glob
