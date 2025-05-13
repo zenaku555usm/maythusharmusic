@@ -25,6 +25,6 @@ SoundCloud = SoundAPI()
 Spotify = SpotifyAPI()
 Resso = RessoAPI()
 Telegram = TeleAPI()
-YouTube = YouTubeAPI()
+YouTube = YouTube()
 
 APP = "sasukevipmusicbot"  # connect music api key "Dont change it"
