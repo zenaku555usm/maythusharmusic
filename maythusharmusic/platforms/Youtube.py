@@ -80,8 +80,6 @@ class YouTubeAPI:
     def __init__(self):
         self.base = "https://www.youtube.com/watch?v="
         self.regex = r"(?:youtube\.com|youtu\.be)"
-        self.api_url = f"http://159.89.175.53:8080/download/song/{video_id}?key={API_KEY}"
-        self.api_key = "1EdAhtfqtegJL0A6I6RjCaxv"
         self.status = "https://www.youtube.com/oembed?url="
         self.listbase = "https://youtube.com/playlist?list="
         self.reg = re.compile(r"\x1B(?:[@-Z\\-_]|\[[0-?]*[ -/]*[@-~])")
