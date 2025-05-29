@@ -12,7 +12,7 @@ services:
       - key: API_HASH
         value: "7387774d17aaa79c3744ff5d9d148214"
       - key: BOT_TOKEN
-        value: "7266704237:AAH6JEOMIhRFgzGaGRMGTAOL0L5AWJfCjak"
+        value: "7742260549:AAEdDkdYQ4Os7PxJMLktkjg6sVbI7nWkjdY"
       - key: MONGO_DB_URI
         value: "mongodb+srv://pyaesonev1:pyaesone@pyaesonev1.4nssv9g.mongodb.net/?retryWrites=true&w=majority"
       - key: OWNER_ID
